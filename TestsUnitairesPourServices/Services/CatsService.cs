@@ -21,13 +21,13 @@ namespace TestsUnitairesPourServices.Services
 				throw new WildCatException("On n'apprivoise pas les chats sauvages");
 
 			//On n'a pas fourni la bonne maison d'origine
-            if (cat.House.Id != from.Id)
-                throw new DontStealMyCatException("Touche pas à mon chat!");
+			if (cat.House.Id != from.Id)
+				throw new DontStealMyCatException("Touche pas à mon chat!");
 
-            cat.House = to;
+			cat.House = to;
 			Update(cat);
 
-            return cat;
-        }
+			return cat;
+		}
 	}
 }
